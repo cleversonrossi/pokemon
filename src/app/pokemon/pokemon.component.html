@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="content table-responsive table-full-width">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th *ngFor="let cell of tableData.headerRow">{{ cell }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of tableData.dataRows">
+                <td>{{ row[1] }}</td>
+                <td width="80px">
+                  <button
+                    class="btn btn-warning btn-fill btn-wd"
+                    (click)="favoritar(row)"
+                  >
+                    {{ row[2] === true ? "Desfavoritar" : "Favoritar" }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
